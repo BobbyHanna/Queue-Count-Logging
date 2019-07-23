@@ -1,8 +1,7 @@
 Include Ensemble
-
 Class Util.LogQueueCounts Extends %SYS.Task.Definition
 {
-
+	
 Property ProductionName As %String [ InitialExpression = "HIE.HIEPROD", Required ];
 
 Parameter TaskName = "Log Queue Counts";
