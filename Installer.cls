@@ -10,7 +10,7 @@ XData MyInstall [ XMLNamespace = INSTALLER ]
   <Default Name="SOURCESPATH" Dir="${APPPATH}src" />
   <Default Name="RESOURCE" Value="%DB_${DBNAME}" /> 
 
-  <Namespace Name="${NAMESPACE}" Code="${DBNAME}-CODE" Data="${DBNAME}-DATA" Create="yes" Ensemble="0">
+  <Namespace Name="${NAMESPACE}" Code="${DBNAME}-CODE" Data="${DBNAME}-DATA" Create="yes" Ensemble="1">
     <Configuration>
       <Database Name="${DBNAME}-CODE" Dir="${APPPATH}${DBNAME}-CODE" Create="yes" Resource="${RESOURCE}"/>
       <Database Name="${DBNAME}-DATA" Dir="${APPPATH}${DBNAME}-DATA" Create="yes" Resource="${RESOURCE}"/>
