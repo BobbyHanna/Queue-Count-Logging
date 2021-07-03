@@ -5,7 +5,10 @@ ARG IMAGE=intersystemsdc/iris-community:2020.4.0.547.0-zpm
 FROM $IMAGE
 ARG NAMESPACE="QLOG"
 
+USER root  
 WORKDIR /opt/app
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/app
+USER ${ISC_PACKAGE_MGRUSER}
 
 COPY ./Installer.cls ./
 COPY ./cls ./src/
