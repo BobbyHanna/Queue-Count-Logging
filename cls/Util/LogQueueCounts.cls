@@ -23,7 +23,7 @@ Method LogCounts() As %Status
 		set tQuery = "select Name from Ens_Config.Item where Production = '"_..ProductionName_"'"
 		set tSC = $$$OK
 #;		set tQuery = pQuery
-#;  pQuery is never set; bcode breaks with UNDEF> 		
+#;  pQuery is never set; code breaks with <UNDEFINED> 		
 		set tStatement=##class(%SQL.Statement).%New(2)
 		set qStatus=tStatement.%Prepare(tQuery)
 	
