@@ -22,13 +22,15 @@ Method LogCounts() As %Status
 		//Get a list of all production items in the specified production. Default production name is 'HIE.HIEPROD'
 		set tQuery = "select Name from Ens_Config.Item where Production = '"_..ProductionName_"'"
 		set tSC = $$$OK
-		set tQuery = pQuery
+#;		set tQuery = pQuery
+#;  pQuery is never set; bcode breaks with UNDEF> 		
 		set tStatement=##class(%SQL.Statement).%New(2)
 		set qStatus=tStatement.%Prepare(tQuery)
 	
 		if qStatus'=1 
 			{
-			write !, pQuery
+#;			write !, pQuery
+			write !, tQuery
 			}
 		
 		set result = tStatement.%Execute()
