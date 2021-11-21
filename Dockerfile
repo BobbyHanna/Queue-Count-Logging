@@ -2,6 +2,7 @@ ARG IMAGE=intersystems/iris:2019.1.0S.111.0
 ARG IMAGE=store/intersystems/iris:2019.1.0.511.0-community
 ARG IMAGE=store/intersystems/iris:2019.2.0.107.0-community
 ARG IMAGE=intersystemsdc/iris-community:2020.4.0.547.0-zpm
+ARG IMAGE=intersystemsdc/iris-community:latest
 FROM $IMAGE
 ARG NAMESPACE="QLOG"
 
