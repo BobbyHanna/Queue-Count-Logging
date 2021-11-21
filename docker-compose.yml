@@ -4,7 +4,10 @@ services:
     build: .
     restart: always
     ports:
+# new SuperServerPort = 1972
+      - 1972
       - 52781:52773
     volumes:
-      - ~/iris.key:/usr/irissys/mgr/iris.key
+# no license reauired for community image
+#      - ~/iris.key:/usr/irissys/mgr/iris.key
       - ./:/iris/app
